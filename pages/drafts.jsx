@@ -10,7 +10,7 @@ const Drafts = props => {
         <h1>Drafts</h1>
         <main>
           {props.drafts.map(post => (
-            <div key={post.id} className="post">
+            <div key={post.id} className="post mt-3">
               <Post post={post} />
             </div>
           ))}

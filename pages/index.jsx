@@ -1,16 +1,19 @@
+
 import Layout from '../components/Layout'
 import Post from '../components/Post'
 import { makeSerializable } from '../lib/util'
 import prisma from '../lib/prisma';
+import Header from '../components/Header';
 
 const Blog = props => {
   return (
-    <Layout>
+    <>
+    <Header />
       <div className="page">
-        <h1>My Blog</h1>
+        <h1 className='text-5xl'>My Blog</h1>
         <main>
           {props.feed.map(post => (
-            <div key={post.id} className="post">
+            <div key={post.id} className="post mt-5 p-6">
               <Post post={post} />
             </div>
           ))}
@@ -30,7 +33,7 @@ const Blog = props => {
           margin-top: 2rem;
         }
       `}</style>
-    </Layout>
+    </>
   )
 }
 
