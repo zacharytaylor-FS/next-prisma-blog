@@ -1,5 +1,4 @@
 'use client'
-import "tw-elements-react/dist/css/tw-elements-react.min.css";
 import  Footer  from './Footer'
 import Header from './Header'
 
