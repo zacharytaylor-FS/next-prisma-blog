@@ -7,20 +7,20 @@ const Create = () => {
   const [content, setContent] = useState('')
   const [authorEmail, setAuthorEmail] = useState('')
 
-  const submitData = async e => {
-    e.preventDefault()
-    try {
-      const body = { title, content, authorEmail }
-      await fetch(`/api/post`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      })
-      await Router.push('/drafts')
-    } catch (error) {
-      console.error(error)
-    }
-  }
+  // const submitData = async e => {
+  //   e.preventDefault()
+  //   try {
+  //     const body = { title, content, authorEmail }
+  //     await fetch(`/api/post`, {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify(body),
+  //     })
+  //     await Router.push('/drafts')
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
+  // }
 
   return (
     <Layout>
